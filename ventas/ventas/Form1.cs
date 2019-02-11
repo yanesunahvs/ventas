@@ -19,7 +19,7 @@ namespace ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hola mundo");
+            MessageBox.Show("Un camino de mil millas empieza con un solo paso");
         }
     }
 }
