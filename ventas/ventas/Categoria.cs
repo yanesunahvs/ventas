@@ -4,11 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ventas
+namespace ventas.Modelos
 {
    public  class Categoria
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+
+        public Categoria(int id, string descripcion)
+        {
+            Id = id;
+            Descripcion = descripcion;
+
+        }
     }
 }

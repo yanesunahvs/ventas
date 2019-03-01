@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ventas", "ventas\ventas.csproj", "{D9A810E2-7235-4098-866F-1D8B7DDB4C5A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelos", "Modelos", "{B6D5CEA4-984F-4811-8910-A4E261F4C877}"
+	ProjectSection(SolutionItems) = preProject
+		ventas\Categoria.cs = ventas\Categoria.cs
+		ventas\Ciudad.cs = ventas\Ciudad.cs
+		ventas\Cliente.cs = ventas\Cliente.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
