@@ -12,6 +12,17 @@ namespace ventas
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
+        public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
+
+        public Producto(int id, string descripcion, double precio, Categoria categoria)
+        {
+            Id = id;
+            Descripcion = descripcion;
+            Precio = precio;
+            Categoria = categoria;
+            CategoriaId = categoria.Id;
+
+        }
     }
 }

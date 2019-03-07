@@ -34,6 +34,9 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label telefonoLabel;
+            System.Windows.Forms.Label descripcionLabel;
+            System.Windows.Forms.Label idLabel1;
+            System.Windows.Forms.Label precioLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.listadeClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -64,16 +67,32 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.listadeProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descripcionTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox1 = new System.Windows.Forms.TextBox();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listadeProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ciudadLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             telefonoLabel = new System.Windows.Forms.Label();
+            descripcionLabel = new System.Windows.Forms.Label();
+            idLabel1 = new System.Windows.Forms.Label();
+            precioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingNavigator)).BeginInit();
             this.listadeClientesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeCategoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // ciudadLabel
@@ -121,6 +140,33 @@
             telefonoLabel.TabIndex = 11;
             telefonoLabel.Text = "Telefono:";
             // 
+            // descripcionLabel
+            // 
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Location = new System.Drawing.Point(414, 61);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(66, 13);
+            descripcionLabel.TabIndex = 16;
+            descripcionLabel.Text = "Descripcion:";
+            // 
+            // idLabel1
+            // 
+            idLabel1.AutoSize = true;
+            idLabel1.Location = new System.Drawing.Point(414, 87);
+            idLabel1.Name = "idLabel1";
+            idLabel1.Size = new System.Drawing.Size(19, 13);
+            idLabel1.TabIndex = 18;
+            idLabel1.Text = "Id:";
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(414, 113);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 20;
+            precioLabel.Text = "Precio:";
+            // 
             // listadeClientesBindingNavigator
             // 
             this.listadeClientesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -147,7 +193,7 @@
             this.listadeClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeClientesBindingNavigator.Name = "listadeClientesBindingNavigator";
             this.listadeClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(861, 25);
+            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(762, 25);
             this.listadeClientesBindingNavigator.TabIndex = 0;
             this.listadeClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -327,9 +373,9 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn7});
             this.listadeClientesDataGridView.DataSource = this.listadeClientesBindingSource;
-            this.listadeClientesDataGridView.Location = new System.Drawing.Point(296, 172);
+            this.listadeClientesDataGridView.Location = new System.Drawing.Point(12, 224);
             this.listadeClientesDataGridView.Name = "listadeClientesDataGridView";
-            this.listadeClientesDataGridView.Size = new System.Drawing.Size(553, 168);
+            this.listadeClientesDataGridView.Size = new System.Drawing.Size(300, 183);
             this.listadeClientesDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -373,11 +419,113 @@
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn7.ValueMember = "Id";
             // 
+            // listadeProductosBindingSource
+            // 
+            this.listadeProductosBindingSource.DataSource = typeof(ventas.Producto);
+            // 
+            // descripcionTextBox
+            // 
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource, "Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(487, 58);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.descripcionTextBox.TabIndex = 17;
+            // 
+            // idTextBox1
+            // 
+            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource, "Id", true));
+            this.idTextBox1.Location = new System.Drawing.Point(487, 84);
+            this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.idTextBox1.TabIndex = 19;
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeProductosBindingSource, "Precio", true));
+            this.precioTextBox.Location = new System.Drawing.Point(487, 110);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.precioTextBox.TabIndex = 21;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listadeProductosBindingSource, "CategoriaId", true));
+            this.comboBox2.DataSource = this.listadeCategoriasBindingSource;
+            this.comboBox2.DisplayMember = "Descripcion";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(487, 148);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 22;
+            this.comboBox2.ValueMember = "Id";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(417, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Categorias";
+            // 
+            // listadeProductosDataGridView
+            // 
+            this.listadeProductosDataGridView.AutoGenerateColumns = false;
+            this.listadeProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listadeProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn11});
+            this.listadeProductosDataGridView.DataSource = this.listadeProductosBindingSource;
+            this.listadeProductosDataGridView.Location = new System.Drawing.Point(357, 200);
+            this.listadeProductosDataGridView.Name = "listadeProductosDataGridView";
+            this.listadeProductosDataGridView.Size = new System.Drawing.Size(384, 220);
+            this.listadeProductosDataGridView.TabIndex = 23;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Precio";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "CategoriaId";
+            this.dataGridViewTextBoxColumn11.DataSource = this.listadeCategoriasBindingSource;
+            this.dataGridViewTextBoxColumn11.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn11.ValueMember = "Id";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 403);
+            this.ClientSize = new System.Drawing.Size(762, 480);
+            this.Controls.Add(this.listadeProductosDataGridView);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(descripcionLabel);
+            this.Controls.Add(this.descripcionTextBox);
+            this.Controls.Add(idLabel1);
+            this.Controls.Add(this.idTextBox1);
+            this.Controls.Add(precioLabel);
+            this.Controls.Add(this.precioTextBox);
             this.Controls.Add(this.listadeClientesDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -394,12 +542,15 @@
             this.Controls.Add(this.listadeClientesBindingNavigator);
             this.Name = "Form2";
             this.Text = "Propiedades";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingNavigator)).EndInit();
             this.listadeClientesBindingNavigator.ResumeLayout(false);
             this.listadeClientesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeCategoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +587,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.BindingSource listadeProductosBindingSource;
+        private System.Windows.Forms.TextBox descripcionTextBox;
+        private System.Windows.Forms.TextBox idTextBox1;
+        private System.Windows.Forms.TextBox precioTextBox;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView listadeProductosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn11;
     }
 }
