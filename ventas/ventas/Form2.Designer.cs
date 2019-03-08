@@ -78,6 +78,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.listadeCiudaddesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ciudadLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -93,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeCiudaddesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ciudadLabel
@@ -196,6 +198,7 @@
             this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(762, 25);
             this.listadeClientesBindingNavigator.TabIndex = 0;
             this.listadeClientesBindingNavigator.Text = "bindingNavigator1";
+            this.listadeClientesBindingNavigator.RefreshItems += new System.EventHandler(this.listadeClientesBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -208,6 +211,7 @@
             // 
             // listadeClientesBindingSource
             // 
+            this.listadeClientesBindingSource.AllowNew = true;
             this.listadeClientesBindingSource.DataSource = typeof(ventas.Modelos.Cliente);
             // 
             // bindingNavigatorCountItem
@@ -289,7 +293,6 @@
             // listadeClientesBindingNavigatorSaveItem
             // 
             this.listadeClientesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listadeClientesBindingNavigatorSaveItem.Enabled = false;
             this.listadeClientesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listadeClientesBindingNavigatorSaveItem.Image")));
             this.listadeClientesBindingNavigatorSaveItem.Name = "listadeClientesBindingNavigatorSaveItem";
             this.listadeClientesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
@@ -421,7 +424,9 @@
             // 
             // listadeProductosBindingSource
             // 
+            this.listadeProductosBindingSource.AllowNew = true;
             this.listadeProductosBindingSource.DataSource = typeof(ventas.Producto);
+            this.listadeProductosBindingSource.CurrentChanged += new System.EventHandler(this.listadeProductosBindingSource_CurrentChanged);
             // 
             // descripcionTextBox
             // 
@@ -512,6 +517,11 @@
             this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn11.ValueMember = "Id";
             // 
+            // listadeCiudaddesBindingSource
+            // 
+            this.listadeCiudaddesBindingSource.AllowNew = false;
+            this.listadeCiudaddesBindingSource.DataSource = typeof(ventas.Modelos.Ciudad);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -551,6 +561,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeCiudaddesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,5 +609,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.BindingSource listadeCiudaddesBindingSource;
     }
 }

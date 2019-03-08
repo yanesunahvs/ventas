@@ -11,6 +11,11 @@ namespace ventas.Modelos
         public int Id { get; set; }
         public string Descripcion { get; set; }
 
+        public Categoria()
+        {
+
+        }
+
         public Categoria(int id, string descripcion)
         {
             Id = id;

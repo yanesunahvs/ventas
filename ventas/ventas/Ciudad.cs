@@ -10,6 +10,11 @@ namespace ventas.Modelos
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
+
+        public Ciudad()
+        {
+
+        }
         
         public Ciudad(int id, string descripcion)
         {

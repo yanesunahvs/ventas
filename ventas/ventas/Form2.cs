@@ -18,20 +18,6 @@ namespace ventas
         {
             InitializeComponent();
 
-            var produtosBl = new ProductosBL();
-            listadeProductosBindingSource.DataSource = produtosBl.listadeProductos;
-
-
-            
-            
-
-    var clientesBL = new ClientesBL();
-            listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
-
-            var categoriasBL = new CategoriaBL();
-            listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
-    
-        
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,6 +26,32 @@ namespace ventas
         }
 
         private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void cargarDatos(ProductosBL productosBL, CategoriaBL categoriasBL)
+        {
+
+            listadeProductosBindingSource.DataSource = productosBL.listadeProductos;
+            listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
+
+        }
+
+        public void cargarDatos(ClientesBL clientesBL, CiudadBL ciudadBL)
+        {
+            
+            listadeCiudaddesBindingSource.DataSource = ciudadBL.ListadeCiudades;
+
+            listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
+        }
+
+        private void listadeProductosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listadeClientesBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
 
         }
