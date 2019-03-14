@@ -97,6 +97,7 @@
             // 
             // listadeProductosBindingSource
             // 
+            this.listadeProductosBindingSource.AllowNew = true;
             this.listadeProductosBindingSource.DataSource = typeof(ventas.Modelos.Producto);
             // 
             // listadeProductosBindingNavigator
@@ -217,7 +218,6 @@
             // listadeProductosBindingNavigatorSaveItem
             // 
             this.listadeProductosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listadeProductosBindingNavigatorSaveItem.Enabled = false;
             this.listadeProductosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listadeProductosBindingNavigatorSaveItem.Image")));
             this.listadeProductosBindingNavigatorSaveItem.Name = "listadeProductosBindingNavigatorSaveItem";
             this.listadeProductosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);

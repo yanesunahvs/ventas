@@ -724,5 +724,20 @@ namespace ventas
         {
 
         }
+
+        private void ciudadTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void direccionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void telefonoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

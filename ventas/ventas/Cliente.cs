@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ventas.BL;
 using ventas.Modelos;
 
 namespace ventas.Modelos
@@ -21,7 +22,8 @@ namespace ventas.Modelos
         {
             Categoria = new Categoria(1, "San Pedro Sula");
             CategoriaId = Categoria.Id;
-            
+
+
         }
 
         public Cliente(int id, string nombre, int telefono, string ciudad, string direccion, Categoria categoria)

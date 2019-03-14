@@ -261,6 +261,7 @@
             this.ciudadTextBox.Name = "ciudadTextBox";
             this.ciudadTextBox.Size = new System.Drawing.Size(138, 20);
             this.ciudadTextBox.TabIndex = 4;
+            this.ciudadTextBox.TextChanged += new System.EventHandler(this.ciudadTextBox_TextChanged);
             // 
             // direccionTextBox
             // 
@@ -269,6 +270,7 @@
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(138, 20);
             this.direccionTextBox.TabIndex = 6;
+            this.direccionTextBox.TextChanged += new System.EventHandler(this.direccionTextBox_TextChanged);
             // 
             // idTextBox
             // 
@@ -293,6 +295,7 @@
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(138, 20);
             this.telefonoTextBox.TabIndex = 12;
+            this.telefonoTextBox.TextChanged += new System.EventHandler(this.telefonoTextBox_TextChanged);
             // 
             // comboBox1
             // 
@@ -316,9 +319,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(82, 200);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Categoria:";
+            this.label1.Text = "Ciudad:";
             // 
             // listadeClientesDataGridView
             // 

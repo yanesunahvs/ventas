@@ -13,8 +13,8 @@ namespace ventas
 {
     public partial class Menu : Form
     {
-        
-        CategoriaBL _categoriasBL;
+        ProductosBL _productosBL;
+        CategoriaBL _categoriaBL;
         ClientesBL _clientesBL;
         CiudadBL _ciudadBL;
 
@@ -24,8 +24,8 @@ namespace ventas
         {
             InitializeComponent();
 
-           
-            _categoriasBL = new CategoriaBL();
+            _productosBL = new ProductosBL();
+            _categoriaBL = new CategoriaBL();
             _clientesBL = new ClientesBL();
             _ciudadBL = new CiudadBL();
 
@@ -33,9 +33,9 @@ namespace ventas
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formProductos = new Form2();
+            var formProductos = new Form1();
             formProductos.MdiParent = this;
-            formProductos.cargarDatos( _categoriasBL);
+            formProductos.cargarDatos( _productosBL, _categoriaBL);
             formProductos.Show();
         }
 

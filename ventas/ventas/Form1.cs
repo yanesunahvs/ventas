@@ -34,5 +34,13 @@ namespace ventas
         {
 
         }
+
+        public void cargarDatos(ProductosBL productosBL, CategoriaBL categoriaBL)
+        {
+            
+            listadeProductosBindingSource.DataSource = productosBL.ListadeProductos;
+            listadeCategoriasBindingSource.DataSource = categoriaBL.ListadeCategorias;
+
+        }
     }
 }
