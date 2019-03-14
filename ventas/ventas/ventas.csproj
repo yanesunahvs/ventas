@@ -49,6 +49,7 @@
     <Compile Include="BL\CategoriaBL.cs" />
     <Compile Include="BL\CiudadBL.cs" />
     <Compile Include="BL\ClientesBL.cs" />
+    <Compile Include="BL\ProductosBL.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="Ciudad.cs" />
     <Compile Include="Cliente.cs" />
@@ -94,6 +95,7 @@
     <None Include="Properties\DataSources\ventas.BL.CategoriaBL.datasource" />
     <None Include="Properties\DataSources\ventas.BL.CiudadBL.datasource" />
     <None Include="Properties\DataSources\ventas.BL.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\ventas.BL.ProductosBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
