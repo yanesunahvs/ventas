@@ -13,7 +13,7 @@ namespace ventas
 {
     public partial class Menu : Form
     {
-        ProductosBL _productosBL;
+        
         CategoriaBL _categoriasBL;
         ClientesBL _clientesBL;
         CiudadBL _ciudadBL;
@@ -24,7 +24,7 @@ namespace ventas
         {
             InitializeComponent();
 
-            _productosBL = new ProductosBL();
+           
             _categoriasBL = new CategoriaBL();
             _clientesBL = new ClientesBL();
             _ciudadBL = new CiudadBL();
@@ -35,7 +35,7 @@ namespace ventas
         {
             var formProductos = new Form2();
             formProductos.MdiParent = this;
-            formProductos.cargarDatos(_productosBL, _categoriasBL);
+            formProductos.cargarDatos( _categoriasBL);
             formProductos.Show();
         }
 
