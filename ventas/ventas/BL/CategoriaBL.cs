@@ -19,8 +19,8 @@ namespace ventas.BL
         }
         private void CrearDatosdePrueba()
         {
-            var categoria1 = new Categoria(1, "Laptops");
-            var categoria2 = new Categoria(2, "Accesorios");
+            var categoria1 = new Categoria(1, "Nombre");
+            var categoria2 = new Categoria(2, "Ciudades");
 
 
             ListadeCategorias.Add(categoria1);

@@ -32,6 +32,20 @@ namespace ventas.BL
             return precio;
         }
 
+        public double ObtenerCosto(int id)
+        {
+            double costo = 0;
+            foreach (var producto in ListadeProductos)
+            {
+                if (producto.Id == id)
+                {
+                    costo = producto.Costo;
+                }
+            }
+
+            return costo;
+        }
+
         private void CrearDatosdePrueba()
         {
             var categoria1 = new Categoria(1, "Laptops");
