@@ -15,16 +15,15 @@ namespace ventas.BL
         public ProveedoresBL()
         {
             ListadeProveedores = new BindingList<Proveedores>();
+            CrearDatosdePrueba();
         }
+
         private void CrearDatosdePrueba()
         {
-            var categoria1 = new Categoria(1, "Nombres");
-            var categoria2 = new Categoria(2, "Ciudades");
-
-
-            var proveedor1 = new Proveedores(111, "Ricardo Milos", 88778899, "Brasilia", "Brasil", categoria1);
-            var proveedor2 = new Proveedores(222, "Kiki Camarena", 99223344, "Tijuana", "Mexico", categoria2);
-            var proveedor3 = new Proveedores(333, "Cristofer Deku", 99240228, "La Union", "SPS, Honduras", categoria2);
+            
+            var proveedor1 = new Proveedores(111, "Ricardo Milos", 88778899);
+            var proveedor2 = new Proveedores(222, "Kiki Camarena", 99223344);
+            var proveedor3 = new Proveedores(333, "Cristofer Deku", 99240228);
 
 
 

@@ -19,7 +19,7 @@ namespace ventas.Modelos
         public Producto()
         {
             Categoria = new Categoria(1, "Laptop Dell");
-            CategoriaId = Categoria.Id;
+            
 
         }
 

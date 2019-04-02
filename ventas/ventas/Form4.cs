@@ -17,10 +17,10 @@ namespace ventas
         {
             InitializeComponent();
         }
-          public void cargarDatos(ProveedoresBL proveedoresBL, CategoriaBL categoriaBL)
+          public void cargarDatos(ProveedoresBL proveedoresBL)
         {
             listadeProveedoresBindingSource.DataSource = proveedoresBL.ListadeProveedores;
-            listadeCategoriasBindingSource.DataSource = categoriaBL.ListadeCategorias;
+            
         }
 
         private void listadeCategoriasBindingSource_CurrentChanged(object sender, EventArgs e)

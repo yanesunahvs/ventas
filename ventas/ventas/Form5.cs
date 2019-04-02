@@ -13,10 +13,9 @@ namespace ventas
 {
     public partial class Form5 : Form
     {
-
         ComprasBL _comprasBL;
-        ProveedoresBL _provedoresBL;
-        ProductosBL _productosBL;
+
+        
         public Form5()
         {
             InitializeComponent();
@@ -24,10 +23,6 @@ namespace ventas
         public void cargarDatos(ComprasBL comprasBL, ProveedoresBL proveedoresBL, ProductosBL productosBL)
         {
             _comprasBL = comprasBL;
-            _provedoresBL = proveedoresBL;
-            _productosBL = productosBL;
-
-
             listadeComprasBindingSource.DataSource = comprasBL.ListadeCompras;
             listadeProveedoresBindingSource.DataSource = proveedoresBL.ListadeProveedores;
             listadeProductosBindingSource.DataSource = productosBL.ListadeProductos;
@@ -37,9 +32,9 @@ namespace ventas
         {
             var compras = (Compras)listadeComprasBindingSource.Current;
             compras.CalcularTotalcompras();
-
             listadeComprasBindingSource.ResetBindings(false);
         }
     }
+
 
 }
