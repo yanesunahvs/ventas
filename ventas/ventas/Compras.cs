@@ -46,7 +46,7 @@ namespace ventas
             }
 
             Subtotal = subtotal;
-            Impuesto = subtotal * 0.15;
+            Impuesto = Subtotal * 0.15;
             Total = Subtotal + Impuesto;
             
         }

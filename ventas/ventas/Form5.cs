@@ -32,6 +32,7 @@ namespace ventas
         {
             var compras = (Compras)listadeComprasBindingSource.Current;
             compras.CalcularTotalcompras();
+
             listadeComprasBindingSource.ResetBindings(false);
         }
     }
