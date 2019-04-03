@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelos", "Modelos", "{B6D5
 		ventas\Factura.cs = ventas\Factura.cs
 		ventas\Producto.cs = ventas\Producto.cs
 		ventas\Proveedores.cs = ventas\Proveedores.cs
+		ventas\Usuario.cs = ventas\Usuario.cs
 	EndProjectSection
 EndProject
 Global
