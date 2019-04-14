@@ -105,5 +105,52 @@ namespace ventas
 
             reporteDeClientesToolStripMenuItem.Visible = login.UsuarioAutenticado.PuedeVerReportes;
         }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeProductos = new FormReportedeProductos();
+            formReportedeProductos.MdiParent = this;
+            formReportedeProductos.cargarDatos(_productosBL);
+
+            formReportedeProductos.Show();
+        }
+
+        private void totalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeVentas = new FormReportedeVentas();
+
+            formReportedeVentas.cargarDatos(_facturaBL, _clientesBL);
+            formReportedeVentas.MdiParent = this;
+
+            formReportedeVentas.Show();
+        }
+
+        private void reporteDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeCompras = new FormReportedeCompras();
+            formReportedeCompras.MdiParent = this;
+            formReportedeCompras.cargarDatos(_comprasBL, _proveedoresBL);
+            formReportedeCompras.Show();
+        }
+
+        private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeClientes = new FormReportedeClientes();
+            formReportedeClientes.caragarDatos(_clientesBL);
+            
+            formReportedeClientes.MdiParent = this;
+
+            formReportedeClientes.Show();
+        }
+
+        private void reportedeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeProveedores = new FormReportedeProveeedores();
+
+            formReportedeProveedores.cargarDatos(_proveedoresBL);
+            formReportedeProveedores.MdiParent = this;
+
+            formReportedeProveedores.Show();
+        }
     }
 }
